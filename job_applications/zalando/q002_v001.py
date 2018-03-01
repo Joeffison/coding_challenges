@@ -7,10 +7,10 @@ def ignore(S, i, j):
     on the left and on the right side
   """
   while (i < j-1) and (S[i + 1] == ')'):
-    i = i + 1
+    i += 1
 
   while (i < j-1) and (S[j - 1] == '('):
-    j = j - 1
+    j -= 1
 
   return i, j
 
@@ -21,10 +21,10 @@ def walk(i, j):
     making sure that i < j-1
   """
   if i < j - 1:
-    i = i + 1
+    i += 1
     # It is necessary to check again if i < j-1, after we incremented i
     if i < j - 1:
-      j = j - 1
+      j -= 1
 
   return i, j
 
