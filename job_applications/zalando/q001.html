@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+
+  <body>
+  <div id="brinza-task-description">
+    <p>Four integers A, B, C and D are given. The integers can be used to describe two points on a plane by assigning their values to the coordinates of the points. Each integer has to be assigned to exactly one coordinate. Your task is to assign the integers A, B, C and D to the coordinates of two points in such a way as to maximize the squared distance between those points.</p>
+    <p>For example, let's consider the following values:</p>
+    <tt style="white-space:pre-wrap">  A = 1
+  B = 1
+  C = 2
+  D = 3</tt>
+    <p>One way is to create two points (A, D) and (B, C) as shown below:</p>
+    <p><img class="inline-description-image" src="https://codility-frontend-prod.s3.amazonaws.com:443/media/task_static/max_segment/static/images/auto/2cfafd6c7f99da0066639cc3656c6569.png"></p>
+    <p>The squared distance between the chosen points is equal to 1. Another way would be to create points (A, C) and (D, B):</p>
+    <p><img class="inline-description-image" src="https://codility-frontend-prod.s3.amazonaws.com:443/media/task_static/max_segment/static/images/auto/65cb7e6fa5a9e4f227063b15b6b6f5e5.png"></p>
+    <p>The squared distance between these points is equal to 5, which is the maximum possible value. Note that this value can be also achieved by choosing points (A, B) and (C, D), as shown below:</p>
+    <p><img class="inline-description-image" src="https://codility-frontend-prod.s3.amazonaws.com:443/media/task_static/max_segment/static/images/auto/2af160562b4bc2677d8c13ebdf3fcb4e.png"></p>
+    <p>Write a function:</p>
+    <blockquote><p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>class Solution { public int solution(int A, int B, int C, int D); }</tt></p></blockquote>
+    <p>that, given four integers A, B, C and D, returns the maximum possible squared distance between two points that can be plotted with those integers.</p>
+    <p>For example, given input:</p>
+<tt style="white-space:pre-wrap">  A = 1
+  B = 1
+  C = 2
+  D = 3</tt>
+    <p>your function should return 5, as explained above. Given:</p>
+    <tt style="white-space:pre-wrap">  A = 2
+  B = 4
+  C = 2
+  D = 4</tt>
+    <p>the function should return 8. This value can be achieved by choosing points (A, C) and (B, D), as shown below:</p>
+    <p><img class="inline-description-image" src="https://codility-frontend-prod.s3.amazonaws.com:443/media/task_static/max_segment/static/images/auto/3038ebcbeac498c5ee0d9a93bb23e80a.png"></p>
+    <p>Note that the four integers supplied as input are not necessarily distinct or sorted.</p>
+    <p>Assume that:</p>
+    <blockquote><ul style="margin: 10px;padding: 0px;"><li>A, B, C and D are integers within the range [<span class="number">−5,000</span>..<span class="number">5,000</span>].</li>
+    </ul>
+    </blockquote><p>In your solution, focus on <b><b>correctness</b></b>. The performance of your solution will not be the focus of the assessment.</p>
+  </div>
+  </body>
+</html>

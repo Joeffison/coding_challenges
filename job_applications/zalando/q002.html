@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+
+  <body>
+  <div id="brinza-task-description">
+<p>You are given a string S consisting of N brackets, opening "<tt style="white-space:pre-wrap">(</tt>" and/or closing "<tt style="white-space:pre-wrap">)</tt>". The goal is to split S into two parts (left and right), such that the number of opening brackets in the left part is equal to the number of closing brackets in the right part.</p>
+<p>More formally, we are looking for an integer K (the length of the first part of the split) such that:</p>
+<blockquote><ul style="margin: 10px;padding: 0px;"><li>0 ≤ K ≤ N, and</li>
+<li>the number of opening brackets in the K leading characters of S is the same as the number of closing brackets in the N−K trailing characters of S.</li>
+</ul>
+</blockquote><p>Please keep in mind that input string and any of resulting strings do not need to be properly matched parentheses. The requirement is that the number of opening brackets in the left part of the split should be exactly the same as number of closing brackets in the right part.</p>
+<p>Write a function:</p>
+<blockquote><p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>def solution(S)</tt></p></blockquote>
+<p>that, given string S, returns a value for K that satisfies the above conditions. It can be shown that such a number K always exists and is unique.</p>
+<p>For example, given S = "<tt style="white-space:pre-wrap">(())</tt>", the function should return 2, because:</p>
+<blockquote><ul style="margin: 10px;padding: 0px;"><li>the first two characters of S, "<tt style="white-space:pre-wrap">((</tt>", contain two opening brackets, and</li>
+<li>the remaining two characters of S, "<tt style="white-space:pre-wrap">))</tt>", contain two closing brackets.</li>
+</ul>
+</blockquote><p>In other example, given S = "<tt style="white-space:pre-wrap">(())))(</tt>", the function should return 4, because:</p>
+<blockquote><ul style="margin: 10px;padding: 0px;"><li>the first four characters of S, "<tt style="white-space:pre-wrap">(())</tt>", contain two opening brackets, and</li>
+<li>the remaining three characters of S, "<tt style="white-space:pre-wrap">))(</tt>", contain two closing brackets.</li>
+</ul>
+</blockquote><p>In other example, given S = "<tt style="white-space:pre-wrap">))</tt>", the function should return 2, because:</p>
+<blockquote><ul style="margin: 10px;padding: 0px;"><li>the first two characters of S, "<tt style="white-space:pre-wrap">))</tt>", contain zero opening brackets, and</li>
+<li>there are no remaining characters, so they contain also zero closing brackets.</li>
+</ul>
+</blockquote><p>Assume that:</p>
+<blockquote><ul style="margin: 10px;padding: 0px;"><li>N is an integer within the range [<span class="number">0</span>..<span class="number">100,000</span>];</li>
+<li>string S consists only of the characters "<tt style="white-space:pre-wrap">(</tt>" and/or "<tt style="white-space:pre-wrap">)</tt>".</li>
+</ul>
+</blockquote><p>Complexity:</p>
+<blockquote><ul style="margin: 10px;padding: 0px;"><li>expected worst-case time complexity is O(N);</li>
+<li>expected worst-case space complexity is O(1) (not counting the storage required for input arguments).</li>
+</ul>
+</blockquote></div>
+  </body>
+</html>
