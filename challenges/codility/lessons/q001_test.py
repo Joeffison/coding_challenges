@@ -2,7 +2,7 @@
 
 import unittest
 
-from tool_intro.codility.lessons.q001_v001 import *
+from challenges.codility.lessons.q001_v001 import *
 
 
 def to_bin(n):

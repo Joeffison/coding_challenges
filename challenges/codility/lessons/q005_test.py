@@ -1,8 +1,8 @@
-#!/usr/binMAX_VALUEenv python3
+#!/usr/bin/env python3
 
 import unittest
 
-from tool_intro.codility.lessons.q005_v001 import *
+from challenges.codility.lessons.q005_v001 import *
 
 MAX_VALUE = 1000000000
 

@@ -2,7 +2,7 @@
 
 import unittest
 
-from tool_intro.codility.lessons.q003_v001 import *
+from challenges.codility.lessons.q003_v001 import *
 
 
 class Codility3TestCase(unittest.TestCase):

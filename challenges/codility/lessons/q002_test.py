@@ -2,7 +2,7 @@
 
 import unittest
 
-from tool_intro.codility.lessons.q002_v001 import *
+from challenges.codility.lessons.q002_v001 import *
 
 
 def get_random_odd_list(n):

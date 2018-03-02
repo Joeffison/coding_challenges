@@ -5,7 +5,7 @@ import unittest
 
 import numpy as np
 
-from tool_intro.codility.lessons.q004_v001 import *
+from challenges.codility.lessons.q004_v001 import *
 
 MIN_ELEMENT = -1000
 MAX_ELEMENT = 1000

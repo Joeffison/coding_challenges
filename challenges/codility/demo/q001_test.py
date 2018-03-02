@@ -3,7 +3,7 @@
 import random
 import unittest
 
-from tool_intro.codility.q001_v001 import *
+from challenges.codility.demo.q001_v002 import *
 
 MIN_RESULT = 1
 

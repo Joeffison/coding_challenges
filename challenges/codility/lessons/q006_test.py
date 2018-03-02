@@ -1,9 +1,9 @@
-#!/usr/binMAX_VALUEenv python3
+#!/usr/bin/env python3
 
 import random
 import unittest
 
-from tool_intro.codility.lessons.q006_v001 import *
+from challenges.codility.lessons.q006_v001 import *
 
 
 def get_random_input_and_solution(n):
@@ -12,6 +12,7 @@ def get_random_input_and_solution(n):
   array.pop(solution - 1)
   random.shuffle(array)
   return solution, array
+
 
 class Codility6TestCase(unittest.TestCase):
 

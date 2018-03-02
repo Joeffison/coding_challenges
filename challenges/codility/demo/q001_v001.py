@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 
-def solution(A):
+def solution(array):
   """
-  Finds the smallest positive integer not in A.
+  Finds the smallest positive integer not in array.
   The smallest possible answer is 1.
 
-  :param A: list of integers
-  :return: smallest positive integer not in A.
+  :param array: list of integers
+  :return: smallest positive integer not in array.
   """
 
   # smallest answer so far
@@ -16,10 +16,10 @@ def solution(A):
   # visited values
   visited = []
 
-  for value in A:
+  for value in array:
     visited.append(value)
     # if i is equal to value,
-    # we have to increment it before we visit the next item in A.
+    # we have to increment it before we visit the next item in array.
     if value == i:
       # we have to increment i to a number that we did not visit before.
       while True:
