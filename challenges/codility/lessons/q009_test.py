@@ -3,14 +3,14 @@
 import random
 import unittest
 
-from challenges.codility.demo.q001_v002 import *
+from challenges.codility.lessons.q009_v002 import *
 
 MIN_RESULT = 1
 
 
 def negative_list(end_value, ordered=False, start_value=-1):
   """
-  Creates a lsit of negative values using the given range.
+  Creates a list of negative values using the given range.
 
   :param end_value: Smallest value (inclusive)
   :param ordered: If false, array is shuffled
