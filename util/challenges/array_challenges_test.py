@@ -3,7 +3,7 @@
 import random
 import unittest
 
-from util.challenges.array_utils import get_missing_value
+from util.challenges.array_challenges import get_missing_value
 
 
 class GetMissingValueTestCase(unittest.TestCase):

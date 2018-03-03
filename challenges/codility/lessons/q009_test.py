@@ -24,7 +24,7 @@ def negative_list(end_value, ordered=False, start_value=-1):
   return response
 
 
-class CodilityTestCase(unittest.TestCase):
+class Codility9TestCase(unittest.TestCase):
 
   def test_only_negatives(self):
     """

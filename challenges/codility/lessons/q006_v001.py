@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from util.challenges.array_utils import get_missing_value
+from util.challenges.array_challenges import get_missing_value
 
 
 def solution(array):
