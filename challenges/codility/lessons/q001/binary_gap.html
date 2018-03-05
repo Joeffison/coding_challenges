@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Binary Gap</title>
+  </head>
+
+  <body>
+  <div id="brinza-task-description">
+    <p>A <i>binary gap</i> within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.</p>
+    <p>For example, number 9 has binary representation <tt style="white-space:pre-wrap">1001</tt> and contains a binary gap of length 2. The number 529 has binary representation <tt style="white-space:pre-wrap">1000010001</tt> and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation <tt style="white-space:pre-wrap">10100</tt> and contains one binary gap of length 1. The number 15 has binary representation <tt style="white-space:pre-wrap">1111</tt> and has no binary gaps.</p>
+    <p>Write a function:</p>
+    <blockquote><p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>def solution(N)</tt></p></blockquote>
+    <p>that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.</p>
+    <p>For example, given N = 1041 the function should return 5, because N has binary representation <tt style="white-space:pre-wrap">10000010001</tt> and so its longest binary gap is of length 5.</p>
+    <p>Assume that:</p>
+    <blockquote><ul style="margin: 10px;padding: 0px;"><li>N is an integer within the range [<span class="number">1</span>..<span class="number">2,147,483,647</span>].</li>
+    </ul>
+    </blockquote><p>Complexity:</p>
+    <blockquote><ul style="margin: 10px;padding: 0px;"><li>expected worst-case time complexity is O(log(N));</li>
+    <li>expected worst-case space complexity is O(1).</li>
+    </ul>
+    </blockquote>
+  </div>
+  </body>
+</html>
