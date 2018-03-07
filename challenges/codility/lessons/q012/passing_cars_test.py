@@ -37,6 +37,7 @@ class PassingCarsTestCase(unittest.TestCase):
     self.__test_random(1000)
 
   # Performance
+
   def test_medium_random(self):
     self.__test_random(MAX_N)
 
