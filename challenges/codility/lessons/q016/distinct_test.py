@@ -88,7 +88,7 @@ class DistinctTestCase(unittest.TestCase):
       return 0
 
   def __test_sequence(self, n=100, shuffled=True):
-    l = range(n)
+    l = list(range(n))
 
     if shuffled:
       random.shuffle(l)

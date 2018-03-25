@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maximal Product of Triplet</title>
+</head>
+<body>
+  <div id="brinza-task-description">
+    <p>A non-empty zero-indexed array A consisting of N integers is given.
+      The <i>product</i> of triplet (P, Q, R) equates to A[P] * A[Q] * A[R] (0 ≤ P &lt; Q &lt; R &lt; N).
+    </p>
+
+    <p>For example, array A such that:</p>
+    <tt style="white-space:pre-wrap">  A[0] = -3
+  A[1] = 1
+  A[2] = 2
+  A[3] = -2
+  A[4] = 5
+  A[5] = 6</tt>
+
+    <p>contains the following example triplets:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;"><li>(0, 1, 2), product is −3 * 1 * 2 = −6</li>
+        <li>(1, 2, 4), product is  1 * 2 * 5 = 10</li>
+        <li>(2, 4, 5), product is  2 * 5 * 6 = 60</li>
+      </ul>
+    </blockquote>
+    <p>Your goal is to find the maximal product of any triplet.</p>
+
+    <p>Write a function:</p>
+    <blockquote>
+      <p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>def solution(A)</tt></p>
+    </blockquote>
+    <p>that, given a non-empty zero-indexed array A, returns the value of the maximal product of any triplet.</p>
+    <p>For example, given array A such that:</p>
+    <tt style="white-space:pre-wrap">  A[0] = -3
+  A[1] = 1
+  A[2] = 2
+  A[3] = -2
+  A[4] = 5
+  A[5] = 6</tt>
+    <p>the function should return 60, as the product of triplet (2, 4, 5) is maximal.</p>
+    <p>Assume that:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          N is an integer within the range [<span class="number">3</span>..<span class="number">100,000</span>];
+        </li>
+        <li>
+          each element of array A is an integer within the
+          range [<span class="number">−1,000</span>..<span class="number">1,000</span>].
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Complexity:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;"><li>expected worst-case time complexity is O(N*log(N));</li>
+        <li>
+          expected worst-case space complexity is O(1), beyond input storage
+          (not counting the storage required for input arguments).
+        </li>
+      </ul>
+    </blockquote>
+  </div>
+</body>
+</html>
