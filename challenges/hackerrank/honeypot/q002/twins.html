@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twins</title>
+</head>
+
+<body>
+<div aria-label="Question Content" class="challenge-text hrx-version ck_table-wrap fadeinContent" style="min-height:100px;"><style type="text/css">.ps-content-wrapper-v0 div { margin: 0 auto; overflow: auto; } .ps-content-wrapper-v0 div.preheader { display: none; } .ps-content-wrapper-v0 p { white-space: pre-wrap; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 p.section-title { font-weight: bold; padding-bottom: 0px; } .ps-content-wrapper-v0 ol.plain-list, .ps-content-wrapper-v0 ul.plain-list { list-style-type: none; padding: 4px; } .ps-content-wrapper-v0 li { white-space: normal; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 code { color: black; } .ps-content-wrapper-v0 pre { background-color: #f4faff; border: 0; border-radius: 2px; margin: 8px; padding: 10px; } .ps-content-wrapper-v0 figure { background-color: transparent; display: table; margin-top: 8px; margin-bottom: 8px; text-align: center; margin-left: auto; margin-right: auto; } .ps-content-wrapper-v0 figcaption { text-align: center; display: table-caption; caption-side: bottom; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 img { width: auto; max-width: 100%; height: auto; } .ps-content-wrapper-v0 details { background-color: transparent; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 details summary { background-color: #39424e; color: white; font-weight: bold; margin-top: 4px; margin-bottom: 4px; padding: 8px; } .ps-content-wrapper-v0 details div.collapsable-details { margin: 0 auto; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; overflow: auto; } .ps-content-wrapper-v0 details div.collapsable-details pre { margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 table { border: 1px solid black; border-collapse: collapse; border-color: darkgray; margin: 0 auto; margin-top: 8px; margin-bottom: 8px; padding: 8px; width: 96%; table-layout: fixed; } .ps-content-wrapper-v0 table tbody tr th, .ps-content-wrapper-v0 table tbody tr td { font-weight: bold; white-space: nowrap; text-align: center; vertical-align: middle; border: 1px solid black; border-color: darkgray; padding: 8px; } .ps-content-wrapper-v0 table tbody tr th.description { width: 60%; } .ps-content-wrapper-v0 table tbody tr td { font-weight: normal; white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr:first-child td.headers { border-bottom-width: 2px; } .ps-content-wrapper-v0 table.function-params tbody tr:last-child td { border-top-width: 2px; border-top-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.headers { width: 25%; font-weight: bold; text-align: center; border: 1px solid black; border-right-width: 2px; border-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell { width: 100%; height: 100%; padding: 0px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table { width: 100%; height: 100%; padding: 0px; margin: 0px; border: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td.code { white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th { border-top: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:last-child { border-right: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr:last-child td { border-bottom: 0; border-top-width: 1px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:last-child { border-right: 0; } .ps-content-wrapper-v0 .left { text-align: left; } .ps-content-wrapper-v0 .right { text-align: right; } .ps-content-wrapper-v0 .code { font-family: monospace; white-space: nowrap; } .ps-content-wrapper-v0 .json-object-array ol, .ps-content-wrapper-v0 .json-object-array ol ul { margin-top: 0px; padding-left: 14px; } .json-object-array li { float: left; margin-right: 30px; margin-left: 10px; } .json-object-array pre { padding: 4px; margin-left: 0px; }
+</style>
+<div class="ps-content-wrapper-v0">
+<div style="display:none;font-size:1px;color:#333333;line-height:1px;overflow:hidden;">Determine if some number of operations will make two strings equivalent.</div>
+
+<p>Two strings are said to be <em>twins</em> only if they can be made equivalent by performing some number of operations on one or both strings. There are two possible operations:</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>SwapEven: Swap a character at an even-numbered index with a character at another even-numbered index.</li>
+	<li>SwapOdd: Swap a character at an odd-numbered index with a character at another odd-numbered index.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>For example, given the array [5, 6, 7, 8], you could swap elements values 5 and 7 to get [7, 6, 5, 8]. You could also swap 6 and 8.</p>
+
+<p>&nbsp;</p>
+
+<p>You will be given multiple pairs of strings to test and must return an array of strings either "Yes" or "No" based on whether they are twins. There should be one string added to the array per test in the order the pairs are given.</p>
+
+<p>&nbsp;</p>
+<!--
+<p class="section-title">Function Description</p>
+
+<p>Complete the <em>twins</em> function in the editor below. It has the following parameters:</p>
+
+<table class="function-params">
+	<tbody>
+		<tr>
+			<td class="headers">Parameters</td>
+			<td class="params-table-cell">
+			<table class="params-table">
+				<tbody>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th class="description">Description</th>
+					</tr>
+					<tr>
+						<td class="code">a</td>
+						<td class="code">String Array</td>
+						<td class="left">Input array of strings a<sub>i</sub></td>
+					</tr>
+					<tr>
+						<td class="code">b</td>
+						<td class="code">String Array</td>
+						<td class="left">Input array of strings b<sub>i</sub></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="headers">Return</td>
+			<td class="left">
+			<p>The function must return an array of strings where each index <em>i</em> (0 &le; <em>i</em> &lt; <em>n</em>) contains the string Yes if <em>a<sub>i</sub></em> and <em>b<sub>i</sub></em> are twins or the string No if they are not.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+-->
+
+<p><strong>Function Description </strong></p>
+
+<p>Complete the function <em>twins</em> in the editor below. The function must return an array of strings where each index <em>i</em> (0 ≤ <em>i</em> &lt; <em>n</em>) contains the string Yes if <em>a<sub>i</sub></em> and <em>b<sub>i</sub></em> are twins or the string No if they are not.</p>
+
+<p>&nbsp;</p>
+
+<p>twins has the following parameter(s):</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>a[a<sub>0</sub>,...a<sub>n-1</sub>]:</em>&nbsp; first array of strings</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>b[b<sub>0</sub>,...b<sub>n-1</sub>]:</em>&nbsp; second array of strings</p>
+
+<p class="section-title" title="Guarantees about the test case dataset.">&nbsp;</p>
+
+<p class="section-title" title="Guarantees about the test case dataset.">Constraints</p>
+
+<ul>
+	<li>1 ≤ <em>n</em> ≤ 10<sup>3</sup>
+</li>
+	<li>1 ≤ |<em>a<sub>i</sub></em>|, |<em>b<sub>i</sub></em>| ≤ 100</li>
+	<li>
+<em>a<sub>i</sub></em> and <em>b<sub>i</sub></em> are not guaranteed to have the same length (|a<sub>i</sub>| may not equal |b<sub>i</sub>|).</li>
+	<li>Strings <em>a<sub>i</sub></em> and <em>b<sub>i</sub></em> contain lowercase letters only, in the range ascii[a-z].</li>
+</ul>
+
+<details title="Click bar to open/close the example."><summary class="section-title">Input Format For Custom Testing</summary>
+
+<div class="collapsable-details">
+<p>Input from stdin will be processed as follows and passed to the function.</p>
+
+<p>&nbsp;</p>
+
+<p>The first line contains an integer, <em>n</em>, the number of elements in <em>a</em>.</p>
+
+<p>The next <em>n</em> lines each contain a string describing <em>a<sub>i</sub></em> where <em>0 ≤ i &lt; n.</em></p>
+
+<p>The first line contains an integer, <em>n</em>, the number of elements in <em>b</em>.</p>
+
+<p>The next <em>n</em> lines each contain a string describing b<em><sub>i</sub></em> where <em>0 ≤ i &lt; n.</em></p>
+</div>
+</details>
+
+<details title="Click bar to open/close the example."><summary class="section-title">Sample Case 0</summary>
+
+<p style="font-weight:bold;">&nbsp;</p>
+
+<p style="font-weight:bold;">&nbsp;</p>
+
+<p style="font-weight:bold;">Sample Input</p>
+
+<pre>3
+cdab
+dcba
+abcd
+3
+abcd
+abcd
+abcdcd
+</pre>
+
+<p style="font-weight:bold;">&nbsp;</p>
+
+<p style="font-weight:bold;">Sample Output</p>
+
+<pre>Yes
+No
+No
+</pre>
+
+<p style="font-weight:bold;">&nbsp;</p>
+
+<p style="font-weight:bold;">Explanation</p>
+
+<p>Given <em>a</em> = ["cdab", "dcba", "abcd"] and <em>b</em> = ["abcd", "abcd", "abcdcd"], we process each element as follows:</p>
+
+<ol start="1">
+	<li>
+<em>a<sub>0</sub></em> = "cdab" and <em>b<sub>0</sub></em> = "abcd": We store Yes in index 0 of the return array because <em>a<sub>0</sub></em> = "<strong>c</strong>d<strong>a</strong>b" → "a<strong>d</strong>c<strong>b</strong>" → "abcd" = b<sub>0</sub>.</li>
+	<li>
+<em>a<sub>1</sub></em> = "dcba" and <em>b<sub>1</sub></em> = "abcd": We store No in index 1 of the return array because no amount of operations will move a character from an odd index to an even index, so the two strings will never be equal.</li>
+	<li>
+<em>a<sub>2</sub></em>&nbsp;= "abcd" and <em>b<sub>2</sub></em> = "abcdcd": We store No in index 2&nbsp;of the return array.&nbsp; There is no operation to move a character into a new position in <em>a<sub>2</sub></em>, so the two strings will never be equal.</li>
+</ol>
+
+<p>We then return the array ["Yes", "No","No"] as our answer.</p>
+</details>
+</div>
+</div>
+</body>
+</html>
