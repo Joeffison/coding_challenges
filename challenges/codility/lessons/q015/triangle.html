@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle</title>
+</head>
+<body>
+  <div id="brinza-task-description">
+    <p>A zero-indexed array A consisting of N integers is given.
+      A triplet (P, Q, R) is <i>triangular</i> if 0 ≤ P &lt; Q &lt; R &lt; N and:
+    </p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>A[P] + A[Q] &gt; A[R],</li>
+        <li>A[Q] + A[R] &gt; A[P],</li>
+        <li>A[R] + A[P] &gt; A[Q].</li>
+      </ul>
+    </blockquote>
+    <p>For example, consider array A such that:</p>
+    <tt style="white-space:pre-wrap">  A[0] = 10    A[1] = 2    A[2] = 5
+  A[3] = 1     A[4] = 8    A[5] = 20</tt>
+    <p>Triplet (0, 2, 4) is triangular.</p>
+    <p>Write a function:</p>
+    <blockquote>
+      <p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>def solution(A)</tt></p>
+    </blockquote>
+    <p>
+      that, given a zero-indexed array A consisting of N integers,
+      returns 1 if there exists a triangular triplet for this array and returns 0 otherwise.
+    </p>
+    <p>For example, given array A such that:</p>
+    <tt style="white-space:pre-wrap">  A[0] = 10    A[1] = 2    A[2] = 5
+  A[3] = 1     A[4] = 8    A[5] = 20</tt>
+    <p>the function should return 1, as explained above. Given array A such that:</p>
+    <tt style="white-space:pre-wrap">  A[0] = 10    A[1] = 50    A[2] = 5
+  A[3] = 1</tt>
+    <p>the function should return 0.</p>
+    <p>Assume that:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          N is an integer within the range [<span class="number">0</span>..<span class="number">100,000</span>];
+        </li>
+        <li>
+          each element of array A is an integer within
+          the range [<span class="number">−2,147,483,648</span>..<span class="number">2,147,483,647</span>].
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Complexity:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          expected worst-case time complexity is O(N*log(N));
+        </li>
+        <li>
+          expected worst-case space complexity is O(N), beyond input storage
+          (not counting the storage required for input arguments).
+        </li>
+      </ul>
+    </blockquote>
+  </div>
+</body>
+</html>
