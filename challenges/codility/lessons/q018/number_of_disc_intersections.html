@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Of Disc Intersections</title>
+</head>
+
+<body>
+  <div id="brinza-task-description">
+    <p>We draw N discs on a plane. The discs are numbered from 0 to N − 1. A zero-indexed array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].</p>
+    <p>We say that the J-th disc and K-th disc intersect if J ≠ K and the J-th and K-th discs have at least one common point (assuming that the discs contain their borders).</p>
+    <p>The figure below shows discs drawn for N = 6 and A as follows:</p>
+<tt style="white-space:pre-wrap">  A[0] = 1
+  A[1] = 5
+  A[2] = 2
+  A[3] = 1
+  A[4] = 4
+  A[5] = 0</tt>
+    <p>
+      <img class="inline-description-image"
+           src="https://codility-frontend-prod.s3.amazonaws.com:443/media/task_static/number_of_disc_intersections/static/images/auto/0eed8918b13a735f4e396c9a87182a38.png">
+    </p>
+    <p>There are eleven (unordered) pairs of discs that intersect, namely:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>discs 1 and 4 intersect, and both intersect with all the other discs;</li>
+        <li>disc 2 also intersects with discs 0 and 3.</li>
+      </ul>
+    </blockquote>
+    <p>Write a function:</p>
+    <blockquote>
+      <p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>def solution(A)</tt></p>
+    </blockquote>
+    <p>that, given an array A describing N discs as explained above, returns the number of (unordered) pairs of intersecting discs. The function should return −1 if the number of intersecting pairs exceeds 10,000,000.</p>
+    <p>Given array A shown above, the function should return 11, as explained above.</p>
+    <p>Assume that:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          N is an integer within the range [<span class="number">0</span>..<span class="number">100,000</span>];
+        </li>
+        <li>
+          each element of array A is an integer within the
+          range [<span class="number">0</span>..<span class="number">2,147,483,647</span>].
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Complexity:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          expected worst-case time complexity is O(N*log(N));
+        </li>
+        <li>
+          expected worst-case space complexity is O(N), beyond input storage
+          (not counting the storage required for input arguments).
+        </li>
+      </ul>
+    </blockquote>
+  </div>
+</body>
+</html>
