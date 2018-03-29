@@ -2,7 +2,7 @@
 
 import unittest
 
-from job_applications.zalando.q002_v001 import *
+from job_applications.zalando.q002.q002_v001 import *
 
 
 class ZalandoQ002TestCase(unittest.TestCase):
