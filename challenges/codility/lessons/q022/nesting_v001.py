@@ -10,4 +10,4 @@ def solution(s):
   :return: 1 if the brackets are properly matching, 0 otherwise
   """
 
-  return check_matching_brackets(s, opening="([{", closing=")]}")
+  return check_matching_brackets(s, opening="(", closing=")")

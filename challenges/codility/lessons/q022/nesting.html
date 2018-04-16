@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nesting</title>
+</head>
+
+<body>
+  <div id="brinza-task-description">
+    <p>
+      A string S consisting of N characters is called <i>properly nested</i> if:
+    </p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          S is empty;
+        </li>
+
+        <li>
+          S has the form "<tt style="white-space:pre-wrap">(U)</tt>" where U is a properly nested string;
+        </li>
+
+        <li>
+          S has the form "<tt style="white-space:pre-wrap">VW</tt>" where V and W are properly nested strings.
+        </li>
+      </ul>
+    </blockquote>
+    <p>
+      For example, string "<tt style="white-space:pre-wrap">(()(())())</tt>" is properly nested
+      but string "<tt style="white-space:pre-wrap">())</tt>" isn't.
+    </p>
+
+    <p>Write a function:</p>
+    <blockquote>
+      <p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>def solution(S)</tt></p>
+    </blockquote>
+    <p>
+      that, given a string S consisting of N characters, returns 1 if string S is properly nested and 0 otherwise.
+    </p>
+    <p>
+      For example, given S = "<tt style="white-space:pre-wrap">(()(())())</tt>", the function should return 1 and
+      given S = "<tt style="white-space:pre-wrap">())</tt>", the function should return 0, as explained above.
+    </p>
+
+    <p>Assume that:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          N is an integer within the range [<span class="number">0</span>..<span class="number">1,000,000</span>];
+        </li>
+
+        <li>
+          string S consists only of the characters "<tt style="white-space:pre-wrap">(</tt>"
+          and/or "<tt style="white-space:pre-wrap">)</tt>".
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Complexity:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          expected worst-case time complexity is O(N);
+        </li>
+
+        <li>
+          expected worst-case space complexity is O(1) (not counting the storage required for input arguments).
+        </li>
+      </ul>
+    </blockquote>
+  </div>
+</body>
+</html>
