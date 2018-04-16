@@ -29,7 +29,7 @@ def solution(n):
     # When we do a Bitwise AND with a bit mask containing only one 1,
     # we can tell if the bit in the same position in N is 0 or 1
     if n & bit_mask == 0:
-      if current_state is not START:
+      if current_state != START:
         current_state = LAST_SAW_ZERO
         loop_gap += 1
     else:
