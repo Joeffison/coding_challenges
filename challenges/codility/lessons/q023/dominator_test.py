@@ -2,8 +2,9 @@
 
 import unittest
 
-import timeout_decorator
 import numpy as np
+import timeout_decorator
+
 from challenges.codility.lessons.q023.dominator_v001 import *
 
 MAX_N = 100000

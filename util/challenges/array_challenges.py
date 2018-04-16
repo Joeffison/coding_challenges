@@ -78,3 +78,31 @@ def count_max_mushrooms(array, k, m):
     result = max(result, __count_total(pref, left_pos, right_pos))
 
   return result
+
+
+def get_leader(array):
+  n = len(array)
+  size = 0
+  for k in range(n):
+    if (size == 0):
+      size += 1
+      value = array[k]
+    else:
+      if (value != array[k]):
+        size -= 1
+      else:
+        size += 1
+
+  candidate = -1
+  if (size > 0):
+    candidate = value
+
+  count = 0
+  indexes = []
+  for k in range(n):
+    if (array[k] == candidate):
+      count += 1
+      indexes.append(k)
+  if (count > n // 2):
+    return candidate, indexes
+  return -1, []
