@@ -84,11 +84,11 @@ def get_leader(array):
   n = len(array)
   size = 0
   for k in range(n):
-    if (size == 0):
+    if size == 0:
       size += 1
       value = array[k]
     else:
-      if (value != array[k]):
+      if value != array[k]:
         size -= 1
       else:
         size += 1
@@ -106,3 +106,15 @@ def get_leader(array):
   if (count > n // 2):
     return candidate, indexes
   return -1, []
+
+
+def max_slice(array):
+  """
+  Returns the maximal sum of a slice of array (empty slices are also considered).
+  """
+
+  max_ending = max_slice = 0
+  for a in array:
+    max_ending = max(0, max_ending + a)
+    max_slice = max(max_slice, max_ending)
+  return max_slice
