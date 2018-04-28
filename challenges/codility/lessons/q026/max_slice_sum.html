@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MaxSliceSum</title>
+</head>
+
+<body>
+  <div id="brinza-task-description">
+    <p>
+      A non-empty array A consisting of N integers is given.
+      A pair of integers (P, Q), such that 0 ≤ P ≤ Q &lt; N, is called a <i>slice</i> of array A.
+      The <i>sum</i> of a slice (P, Q) is the total of A[P] + A[P+1] + ... + A[Q].
+    </p>
+    <p>Write a function:</p>
+    <blockquote>
+      <p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>def solution(A)</tt></p>
+    </blockquote>
+    <p>
+      that, given an array A consisting of N integers, returns the maximum sum of any slice of A.
+    </p>
+
+    <p>
+      For example, given array A such that:
+    </p>
+<tt style="white-space:pre-wrap">A[0] = 3  A[1] = 2  A[2] = -6
+A[3] = 4  A[4] = 0</tt>
+    <p>
+      the function should return 5 because:
+    </p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          (3, 4) is a slice of A that has sum 4,
+        </li>
+
+        <li>
+          (2, 2) is a slice of A that has sum −6,
+        </li>
+
+        <li>
+          (0, 1) is a slice of A that has sum 5,
+        </li>
+
+        <li>
+          no other slice of A has sum greater than (0, 1).
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Assume that:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          N is an integer within the range [<span class="number">1</span>..<span class="number">1,000,000</span>];
+        </li>
+
+        <li>
+          each element of array A is an integer within
+          the range [<span class="number">−1,000,000</span>..<span class="number">1,000,000</span>];
+        </li>
+
+        <li>
+          the result will be an integer within the range [−2,147,483,648..2,147,483,647].
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Complexity:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          expected worst-case time complexity is O(N);
+        </li>
+
+        <li>
+          expected worst-case space complexity is O(N),
+          beyond input storage (not counting the storage required for input arguments).
+        </li>
+      </ul>
+    </blockquote>
+  </div>
+</body>
+</html>
