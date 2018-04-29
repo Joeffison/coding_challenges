@@ -10,7 +10,7 @@ MAX_N = 100000
 MIN_ELEMENT = -1000000000
 MAX_ELEMENT = 1000000000
 
-class DominatorTestCase(unittest.TestCase):
+class EquiLeaderTestCase(unittest.TestCase):
 
   def test_description_examples(self):
     self.assertEqual(2, solution([4, 3, 4, 4, 4, 2]))

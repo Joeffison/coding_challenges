@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MaxDoubleSliceSum</title>
+</head>
+
+<body>
+  <div id="brinza-task-description">
+    <p>
+      A non-empty zero-indexed array A consisting of N integers is given.
+    </p>
+    <p>
+      A triplet (X, Y, Z), such that 0 ≤ X &lt; Y &lt; Z &lt; N, is called a <i>double slice</i>.
+    </p>
+    <p>
+      The <i>sum</i> of double slice (X, Y, Z) is
+      the total of A[X + 1] + A[X + 2] + ... + A[Y − 1] + A[Y + 1] + A[Y + 2] + ... + A[Z − 1].
+    </p>
+
+    <p>
+      For example, array A such that:
+    </p>
+<tt style="white-space:pre-wrap">    A[0] = 3
+    A[1] = 2
+    A[2] = 6
+    A[3] = -1
+    A[4] = 4
+    A[5] = 5
+    A[6] = -1
+    A[7] = 2</tt>
+    <p>
+      contains the following example double slices:
+    </p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          double slice (0, 3, 6), sum is 2 + 6 + 4 + 5 = 17,
+        </li>
+
+        <li>
+          double slice (0, 3, 7), sum is 2 + 6 + 4 + 5 − 1 = 16,
+        </li>
+
+        <li>
+          double slice (3, 4, 5), sum is 0.
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>
+      The goal is to find the maximal sum of any double slice.
+    </p>
+
+    <p>Write a function:</p>
+    <blockquote>
+      <p style="font-family: monospace; font-size: 9pt; display: block;
+      white-space: pre-wrap"><tt>def solution(A)</tt></p>
+    </blockquote>
+    <p>
+      that, given a non-empty zero-indexed array A consisting of N integers,
+      returns the maximal sum of any double slice.
+    </p>
+    <p>
+      For example, given:
+    </p>
+<tt style="white-space:pre-wrap">    A[0] = 3
+    A[1] = 2
+    A[2] = 6
+    A[3] = -1
+    A[4] = 4
+    A[5] = 5
+    A[6] = -1
+    A[7] = 2</tt>
+    <p>
+      the function should return 17, because no double slice of array A has a sum of greater than 17.
+    </p>
+
+    <p>Assume that:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          N is an integer within the range [<span class="number">3</span>..<span class="number">100,000</span>];
+        </li>
+
+        <li>
+          each element of array A is an integer
+          within the range [<span class="number">−10,000</span>..<span class="number">10,000</span>].
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Complexity:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          expected worst-case time complexity is O(N);
+        </li>
+
+        <li>
+          expected worst-case space complexity is O(N),
+          beyond input storage (not counting the storage required for input arguments).
+        </li>
+      </ul>
+    </blockquote>
+  </div>
+</body>
+</html>
