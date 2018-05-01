@@ -5,9 +5,7 @@ from math import sqrt
 
 def solution(n):
   """
-  
-  :param n:
-  :return:
+  Returns the number of factors in N.
   """
 
   result = 1

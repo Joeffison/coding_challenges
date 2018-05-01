@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MinPerimeterRectangle</title>
+</head>
+
+<body>
+  <div id="brinza-task-description">
+    <p>
+      An integer N is given, representing the area of some rectangle.
+    </p>
+
+    <p>
+      The <i>area</i> of a rectangle whose sides are of length A and B is A * B,
+      and the <i>perimeter</i> is 2 * (A + B).
+    </p>
+
+    <p>
+      The goal is to find the minimal perimeter of any rectangle whose area equals N.
+      The sides of this rectangle should be only integers.
+    </p>
+
+    <p>
+      For example, given integer N = 30, rectangles of area 30 are:
+    </p>
+
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          (1, 30), with a perimeter of 62,
+        </li>
+
+        <li>
+          (2, 15), with a perimeter of 34,
+        </li>
+
+        <li>
+          (3, 10), with a perimeter of 26,
+        </li>
+
+        <li>
+          (5, 6), with a perimeter of 22.
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Write a function:</p>
+    <blockquote>
+      <p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>def solution(N)</tt></p>
+    </blockquote>
+    <p>
+      that, given an integer N, returns the minimal perimeter of any rectangle whose area is exactly equal to N.
+    </p>
+
+    <p>
+      For example, given an integer N = 30, the function should return 22, as explained above.
+    </p>
+
+
+    <p>Assume that:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          N is an integer within the range [<span class="number">1</span>..<span class="number">1,000,000,000</span>].
+        </li>
+      </ul>
+    </blockquote>
+
+    <p>Complexity:</p>
+    <blockquote>
+      <ul style="margin: 10px;padding: 0px;">
+        <li>
+          expected worst-case time complexity is O(sqrt(N));
+        </li>
+
+        <li>
+          expected worst-case space complexity is O(1).
+        </li>
+      </ul>
+    </blockquote>
+  </div>
+</body>
+</html>
