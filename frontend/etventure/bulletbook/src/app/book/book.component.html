@@ -1,0 +1,36 @@
+<section>
+  <header>
+    <h1>Joey's faves</h1>
+    <input
+      placeholder="Add a new book (ISBN):"
+      [(ngModel)]="newItem.title"
+      (keyup.enter)="addItem()">
+  </header>
+  <section *ngIf="incompleteBooks.length > 0">
+    <ul>
+      <li *ngFor="let item of incompleteBooks">
+        <ng-container>
+          <input type="checkbox" (click)="toggleBookComplete(item)" [checked]="item.complete">
+          <label>{{item.title}}</label>
+          <button (click)="removeBook(item)">remove</button>
+        </ng-container>
+      </li>
+    </ul>
+  </section>
+  <section *ngIf="completeBooks.length > 0">
+    <h2>Read:</h2>
+    <ul>
+      <li *ngFor="let item of completeBooks">
+        <ng-container>
+          <input type="checkbox" (click)="toggleBookComplete(item)" [checked]="item.complete">
+          <label>{{item.title}}</label>
+          <button (click)="removeBook(item)">remove</button>
+        </ng-container>
+      </li>
+    </ul>
+  </section>
+  <footer *ngIf="allBooks() > 0">
+    <strong>{{allBooks()}}</strong>
+    {{allBooks() == 1 ? 'item' : 'items'}} in list
+  </footer>
+</section>
