@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
@@ -16,6 +17,7 @@ import { books } from './redux/reducer';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     StoreModule.forRoot({ books })
   ],
   providers: [],

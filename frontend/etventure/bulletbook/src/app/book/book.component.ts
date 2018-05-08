@@ -13,13 +13,13 @@ export class BookComponent implements OnInit {
   ngOnInit() {
   }
 
-  newItem: Book = new Book();
+  newItem: string = "";
 
   constructor(private bookService: BookService) {}
 
   public addItem(): void {
-    this.bookService.addBook(this.newItem);
-    this.newItem = new Book();
+    this.bookService.addByISBN([this.newItem]);
+    this.newItem = "";
   }
 
   public toggleBookComplete({ id }): void {
