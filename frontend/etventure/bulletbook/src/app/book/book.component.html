@@ -25,6 +25,7 @@
           <input type="checkbox" (click)="toggleBookComplete(item)" [checked]="item.complete">
           <label>{{item.title}}</label>
           <button (click)="removeBook(item)">remove</button>
+          <img src="{{item.thumbnail}}" alt="" style="display: block">
         </ng-container>
       </li>
     </ul>

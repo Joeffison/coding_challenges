@@ -7,7 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class BookService {
   public lastId: number = 0;
   public books: Book[] = [];
-  public faves: string[] = ["9781435139435", "9780785126560", "9780091850425", "9781604507102"];
+  public faves: string[] = [
+    "9781435139435", "9780785126560", "9780955816932",
+    "9780091850425", "9781604507102",
+    "9781107020580"
+  ];
 
   constructor(private _store: Store<any>, private _http: HttpClient) {
     _store.select('books').subscribe(books => {
@@ -26,7 +30,11 @@ export class BookService {
 
   public addBooks(books: any[]): void {
     console.log(books);
-    books.map(item => this.addBook({title: item.volumeInfo.title, complete: true} as Book));
+    books.map(item => this.addBook({
+      title: item.volumeInfo.title,
+      thumbnail: item.volumeInfo.imageLinks.thumbnail,
+      complete: true
+    } as Book));
   }
 
   public addBook(book: Book): void {
@@ -35,6 +43,7 @@ export class BookService {
       payload: {
         id: ++this.lastId,
         title: book.title,
+        thumbnail: book.thumbnail,
         complete: book.complete
       }
     });
