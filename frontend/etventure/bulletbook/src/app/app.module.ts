@@ -8,11 +8,13 @@ import { BookComponent } from './book/book.component';
 
 import { StoreModule } from '@ngrx/store';
 import { books } from './redux/reducer';
+import { BookCardComponent } from './book-card/book-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent
+    BookComponent,
+    BookCardComponent
   ],
   imports: [
     BrowserModule,

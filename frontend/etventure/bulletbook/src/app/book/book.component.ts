@@ -14,7 +14,6 @@ export class BookComponent implements OnInit {
   }
 
   newItem: string = "";
-
   constructor(private bookService: BookService) {}
 
   public addItem(): void {
@@ -22,7 +21,7 @@ export class BookComponent implements OnInit {
     this.newItem = "";
   }
 
-  public toggleBookComplete({ id }): void {
+  public toggleBook({ id }): void {
     this.bookService.toggleBookComplete(id);
   }
 
@@ -33,6 +32,11 @@ export class BookComponent implements OnInit {
   public allBooks(): number {
     return this.incompleteBooks.length + this.completeBooks.length;
   }
+
+  public get books(): Book[] {
+    return this.bookService.getItems();
+  }
+
   public get incompleteBooks(): Array<Book> {
     return this.bookService.getIncompletedItems();
   }

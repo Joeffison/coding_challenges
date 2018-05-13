@@ -1,19 +1,22 @@
 <section>
   <header>
-    <h1>Joey's faves</h1>
+    <h1>
+      Joey's faves
+      <span *ngIf="allBooks() > 0">
+        (<strong>{{allBooks()}}</strong>
+        {{allBooks() == 1 ? 'item' : 'items'}})
+      </span>
+    </h1>
     <input
       placeholder="Add a new book (ISBN):"
       [(ngModel)]="newItem"
       (keyup.enter)="addItem()">
   </header>
-  <section *ngIf="incompleteBooks.length > 0">
+
+  <!--section *ngIf="incompleteBooks.length > 0">
     <ul>
       <li *ngFor="let item of incompleteBooks">
-        <ng-container>
-          <input type="checkbox" (click)="toggleBookComplete(item)" [checked]="item.complete">
-          <label>{{item.title}}</label>
-          <button (click)="removeBook(item)">remove</button>
-        </ng-container>
+        <app-book-card [book]="item" (toggle)="toggleBook($event)" (remove)="removeBook($event)"></app-book-card>
       </li>
     </ul>
   </section>
@@ -21,32 +24,17 @@
     <h2>Read:</h2>
     <ul>
       <li *ngFor="let item of completeBooks">
-        <ng-container>
-          <input type="checkbox" (click)="toggleBookComplete(item)" [checked]="item.complete">
-          <label>{{item.title}}</label>
-          <button (click)="removeBook(item)">remove</button>
-          <img src="{{item.thumbnail}}" alt="" style="display: block">
-        </ng-container>
+        <app-book-card [book]="item" (toggle)="toggleBook($event)" (remove)="removeBook($event)"></app-book-card>
+      </li>
+    </ul>
+  </section-->
+
+  <section *ngIf="true">
+    <ul>
+      <li *ngFor="let item of books">
+        <app-book-card [book]="item" (toggle)="toggleBook($event)" (remove)="removeBook($event)"></app-book-card>
       </li>
     </ul>
   </section>
-  <footer *ngIf="allBooks() > 0">
-    <strong>{{allBooks()}}</strong>
-    {{allBooks() == 1 ? 'item' : 'items'}} in list
-  </footer>
+
 </section>
-
-
-H
-
-<div id="content"></div>
-<script>
-  function handleResponse(response) {
-  for (var i = 0; i < response.items.length; i++) {
-    var item = response.items[i];
-    // in production code, item.text should have the HTML entities escaped.
-    document.getElementById("content").innerHTML += "<br>" + item.volumeInfo.title;
-  }
-}
-</script>
-<script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
