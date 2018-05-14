@@ -13,6 +13,15 @@ export function books(state = [], action) {
         }
         return item;
       });
+    case 'RATE':
+      return state.map(item => {
+        if (item.id === action.payload.id) {
+          return Object.assign({}, item, {
+            rating: action.payload.rating
+          });
+        }
+        return item;
+      });
     default:
       return state;
   }

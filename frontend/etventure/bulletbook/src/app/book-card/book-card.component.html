@@ -4,7 +4,9 @@
     <img src="{{book.thumbnail}}" alt="">
     <span>ISBN10: {{book.isbn10}}</span><br>
     <span>ISBN13: {{book.isbn13}}</span><br>
-    <span>Rating: {{book.rating}}</span><br>
+    <!--span>Rating: {{book.rating}}</span><br-->
+    <input placeholder="Rating" type="number"
+      [(ngModel)]="book.rating">
 
     Read: <input type="checkbox" (click)="toggleItem(book)" [checked]="book.complete">
     <button (click)="removeItem(book)">remove</button>

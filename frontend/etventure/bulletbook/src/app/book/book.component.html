@@ -11,23 +11,8 @@
       placeholder="Add a new book (ISBN):"
       [(ngModel)]="newItem"
       (keyup.enter)="addItem()">
+    <button (click)="randomRank()">{{isRandomRanking ? 'stop random rank' : 'start random rank'}}</button>
   </header>
-
-  <!--section *ngIf="incompleteBooks.length > 0">
-    <ul>
-      <li *ngFor="let item of incompleteBooks">
-        <app-book-card [book]="item" (toggle)="toggleBook($event)" (remove)="removeBook($event)"></app-book-card>
-      </li>
-    </ul>
-  </section>
-  <section *ngIf="completeBooks.length > 0">
-    <h2>Read:</h2>
-    <ul>
-      <li *ngFor="let item of completeBooks">
-        <app-book-card [book]="item" (toggle)="toggleBook($event)" (remove)="removeBook($event)"></app-book-card>
-      </li>
-    </ul>
-  </section-->
 
   <section *ngIf="true">
     <ul>

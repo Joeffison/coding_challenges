@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from './book';
 import { BookService } from './book.service';
+import { Observable, of, timer } from "rxjs";
+import { switchMap, repeat, tap } from "rxjs/operators";
+import { Subscription } from "rxjs/internal/Subscription";
 
 @Component({
   selector: 'app-book',
@@ -9,16 +12,30 @@ import { BookService } from './book.service';
   providers: [BookService]
 })
 export class BookComponent implements OnInit {
+  private randomRank$: Observable<any>;
+  private randomRankingSubscription: Subscription;
 
   ngOnInit() {
+    this.randomRank$ = of(1).pipe(
+      switchMap(() => timer(this._randomTime())),
+      tap(() => {
+        this.books.map(book => {
+          this.bookService.rateBook(book.id, this._getRandom(0, 5));
+          return book;
+        });
+      }),
+      repeat()
+    );
   }
 
   newItem: string = "";
   constructor(private bookService: BookService) {}
 
   public addItem(): void {
-    this.bookService.addByISBN([this.newItem]);
-    this.newItem = "";
+    if(this.newItem){
+      this.bookService.addByISBN([this.newItem]);
+      this.newItem = "";
+    }
   }
 
   public toggleBook({ id }): void {
@@ -30,19 +47,32 @@ export class BookComponent implements OnInit {
   }
 
   public allBooks(): number {
-    return this.incompleteBooks.length + this.completeBooks.length;
+    return this.books.length;
   }
 
   public get books(): Book[] {
     return this.bookService.getItems();
   }
 
-  public get incompleteBooks(): Array<Book> {
-    return this.bookService.getIncompletedItems();
+  public get isRandomRanking(): boolean {
+    return this.randomRankingSubscription !== undefined;
   }
 
-  public get completeBooks(): Array<Book> {
-    return this.bookService.getCompletedItems();
+  public randomRank(): void {
+    if(this.isRandomRanking) {
+      this.randomRankingSubscription.unsubscribe();
+      this.randomRankingSubscription = undefined;
+    } else {
+      this.randomRankingSubscription = this.randomRank$.subscribe();
+    }
+  }
+
+  private _randomTime() {
+    return ~~(Math.random() * 3000) + 500;
+  }
+
+  private _getRandom(min: number, max: number) {
+    return Math.random() * (max - min) + min;
   }
 
 }

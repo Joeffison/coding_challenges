@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Book } from './book';
 import { Store } from '@ngrx/store';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map';
+import { map } from "rxjs/operators";
 
 @Injectable()
 export class BookService {
-  private MAX_REQUEST_SIZE: number = 6;
+  private MAX_REQUEST_SIZE: number = 3;
 
   public lastId: number = 0;
   public books: Book[] = [];
@@ -45,14 +45,14 @@ export class BookService {
   ];
 
   constructor(private _store: Store<any>, private _http: HttpClient) {
-    _store.select('books')
-      .map((data) => {
-        data.sort((a, b) => {
-          return a.rating > b.rating ? -1 : 1;
-        });
-        return data;
-      })
-      .subscribe(books => {
+    let books$ = _store.select('books');
+    books$
+      .pipe(
+        map((data) => {
+          data.sort((a, b) => a.rating > b.rating ? -1 : 1);
+          return data;
+        })
+      ).subscribe(books => {
         this.books = books;
       });
 
@@ -71,8 +71,11 @@ export class BookService {
   }
 
   private addBooks(books: any[]): void {
-    if(books) {
-      books.filter(item => this.validGoogleBookObject(item)).map(item => this.addBook({
+    if(!books) return;
+
+    books
+      .filter(item => this.validGoogleBookObject(item))
+      .map(item => this.addBook({
         title: item.volumeInfo.title,
 
         isbn10: item.volumeInfo.industryIdentifiers[0].type === "ISBN_10" ?
@@ -86,7 +89,6 @@ export class BookService {
           item.volumeInfo.industryIdentifiers[1].identifier : item.volumeInfo.industryIdentifiers[0].identifier),
         complete: true
       } as Book));
-    }
   }
 
   private validGoogleBookObject(book: any): boolean{
@@ -119,6 +121,13 @@ export class BookService {
     this._store.dispatch({
       type: 'REMOVE_BOOK',
       payload: { id: itemId }
+    });
+  }
+
+  public rateBook(itemId: number, rating: number): void {
+    this._store.dispatch({
+      type: 'RATE',
+      payload: { id: itemId, rating: rating }
     });
   }
 
