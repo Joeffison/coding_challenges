@@ -16,6 +16,7 @@ export class BookCardComponent implements OnInit {
   @Input() book: Book;
   @Output() toggle = new EventEmitter<any>();
   @Output() remove = new EventEmitter<any>();
+  @Output() rate = new EventEmitter<any>();
 
   public toggleItem(book: Book): void {
     this.toggle.emit(book);
@@ -23,6 +24,10 @@ export class BookCardComponent implements OnInit {
 
   public removeItem(book: Book): void {
     this.remove.emit(book);
+  }
+
+  public rateItem(book: Book): void {
+    this.rate.emit(book);
   }
 
 }

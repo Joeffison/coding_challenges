@@ -49,7 +49,13 @@ export class BookService {
     books$
       .pipe(
         map((data) => {
-          data.sort((a, b) => a.rating > b.rating ? -1 : 1);
+          data.sort((a, b) => {
+            if(a.rating > b.rating) return -1;
+            else if(a.rating < b.rating) return 1;
+            else if(a.isbn13 > b.isbn13) return -1;
+            else if(a.isbn13 < b.isbn13) return 1;
+            return 0;
+          });
           return data;
         })
       ).subscribe(books => {

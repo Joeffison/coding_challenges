@@ -1,4 +1,5 @@
 .soft-card {
+  cursor: pointer;
   padding-top: 10px;
   position: relative;
   float: left;
@@ -42,7 +43,13 @@
 }
 
 .soft-card button {
-  display: block;
+  float: right;
+  color: white;
+  background-color: red;
+}
+
+.soft-card input {
+  max-width: 40px;
 }
 
 .soft-card img {

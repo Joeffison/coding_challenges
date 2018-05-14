@@ -20,7 +20,8 @@ export class BookComponent implements OnInit {
       switchMap(() => timer(this._randomTime())),
       tap(() => {
         this.books.map(book => {
-          this.bookService.rateBook(book.id, this._getRandom(0, 5));
+          book.rating = this._getRandom(0, 5);
+          this.rateBook(book);
           return book;
         });
       }),
@@ -40,6 +41,10 @@ export class BookComponent implements OnInit {
 
   public toggleBook({ id }): void {
     this.bookService.toggleBookComplete(id);
+  }
+
+  public rateBook(book: Book): void {
+    this.bookService.rateBook(book.id, book.rating);
   }
 
   public removeBook({ id }): void {
