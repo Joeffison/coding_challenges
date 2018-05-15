@@ -8,7 +8,7 @@ import { Subscription } from "rxjs/internal/Subscription";
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css'],
+  styleUrls: ['./book.component.scss'],
   providers: [BookService]
 })
 export class BookComponent implements OnInit {

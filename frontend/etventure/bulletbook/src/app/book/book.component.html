@@ -2,6 +2,7 @@
   <header>
     <h1>
       Joey's faves
+
       <span *ngIf="allBooks() > 0">
         (<strong>{{allBooks()}}</strong>
         {{allBooks() == 1 ? 'item' : 'items'}})
@@ -14,7 +15,7 @@
     <button (click)="randomRank()">{{isRandomRanking ? 'stop random rank' : 'start random rank'}}</button>
   </header>
 
-  <section *ngIf="true">
+  <section *ngIf="books.length > 0">
     <ul>
       <li *ngFor="let item of books">
         <app-book-card [book]="item"

@@ -1,18 +1,25 @@
 <ng-container>
   <div class="soft-card">
-    <label>{{ book.title }}</label>
+    <p class="book-title">{{ book.title }}</p>
     <img src="{{ book.thumbnail }}" alt="">
 
     <span>ISBN10: {{ book.isbn10 }}</span><br>
     <span>ISBN13: {{ book.isbn13 }}</span><br>
 
-    <!--span>Rating: {{book.rating}}</span><br-->
-    <input placeholder="Rating" type="number"
-      [(ngModel)]="book.rating"
-      (change)="rateItem(book)"
-      (keyup)="rateItem(book)">
+    <div class="input-field inline">
+      <input placeholder="Rating" type="number"
+        [(ngModel)]="book.rating"
+        (change)="rateItem(book)"
+        (keyup)="rateItem(book)"/>
+      <label>Rating</label>
+    </div>
 
-    Read: <input type="checkbox" (click)="toggleItem(book)" [checked]="book.complete">
+    <label>
+      <input id="indeterminate-checkbox" type="checkbox"
+      (ngModelChange)="toggleItem(book)" [checked]="book.complete"/>
+      <span>Read</span>
+    </label>
+
     <button (click)="removeItem(book)">X</button>
   </div>
 </ng-container>

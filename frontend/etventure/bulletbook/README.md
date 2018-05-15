@@ -12,6 +12,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+Either use Materialize 0.100.2 or update angular2-materialize to use 1.x (as it is now, just change node_modules/angular2-materialize/dist/index.js as shown below) because "window.Materialize" was renamed to "window.M".
+
+if (!("Materialize" in window)) {
+  if (!("M" in window)) {
+    throw new Error("Couldn't find Materialize object on window. It is created by the materialize-css library. Please import materialize-css before importing angular2-materialize.");
+  } else {
+    window["Materialize"] = window["M"];
+  }
+}
+
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests

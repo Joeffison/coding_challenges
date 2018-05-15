@@ -1,0 +1,61 @@
+.soft-card {
+  padding-top: 10px;
+  position: relative;
+  float: left;
+  width: 24.2256223vw; /* calc(33.3333% - 20px);330.922px; */
+  height: 33.7467057vw; /* 30.7467057vw for 420px; */
+  min-width: 225px;
+  min-height: 285.565784px;
+  background-color: white;
+  margin-right: 16px;
+  margin-bottom: 50px;
+  box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+  }
+
+  a {
+    text-align: center;
+    font-size: 1.5rem;
+    display: block;
+    position: absolute;
+    top: 30%;
+  }
+
+  .icon {
+    display: block;
+    margin: auto;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    font-size: 13vw;
+  }
+
+  .book-title {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  button {
+    float: right;
+    color: white;
+    background-color: red;
+  }
+
+  input, label {
+    max-width: 80px;
+  }
+
+  img {
+    display: block;
+    height: 20vw; /* 1.546875 */
+    width: 12.9292929vw; /* 0.646464646 */
+    min-height: 185.753743px;
+    min-width: 120.083228px;
+  }
+}
