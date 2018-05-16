@@ -12,7 +12,9 @@
       placeholder="Add a new book (ISBN):"
       [(ngModel)]="newItem"
       (keyup.enter)="addItem()">
-    <button (click)="randomRank()">{{isRandomRanking ? 'stop random rank' : 'start random rank'}}</button>
+
+    <a class="btn"
+    (click)="randomRank()">{{isRandomRanking ? 'stop random rank' : 'start random rank'}}</a>
   </header>
 
   <section *ngIf="books.length > 0">
@@ -34,11 +36,11 @@
         </div>
 
         <label>
-          <input id="indeterminate-checkbox" type="checkbox"
+          <input id="indeterminate-checkbox" type="checkbox" class="primary-color"
           (ngModelChange)="toggleBook(book)" [checked]="book.complete"/>
           <span>Read</span>
         </label>
-        <a (click)="removeBook(book)" class="secondary-content btn">
+        <a (click)="removeBook(book)" class="secondary-content primary-color">
           <i class="material-icons">delete</i>
         </a>
         <!--button class="secondary-content" (click)="removeBook(book)">X</button-->

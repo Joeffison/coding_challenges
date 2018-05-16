@@ -1,3 +1,5 @@
+@import "../../styles/styles";
+
 li {
   list-style: none;
 }
@@ -10,4 +12,8 @@ input ~ button {
 
 input[type=number] {
   max-width: 50px !important;
+}
+
+a {
+  cursor: pointer;
 }
