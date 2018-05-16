@@ -16,12 +16,37 @@
   </header>
 
   <section *ngIf="books.length > 0">
-    <ul>
-      <li *ngFor="let item of books">
-        <app-book-card [book]="item"
+    <ul class="collection">
+      <li *ngFor="let book of books" class="collection-item avatar">
+        <img src="{{ book.thumbnail }}" alt="" class="circle">
+        <span class="title">{{ book.title }}</span>
+        <p>
+          ISBN13: {{ book.isbn13 }} <br>
+          ISBN10: {{ book.isbn10 }}
+        </p>
+
+        <div class="input-field inline">
+          <input placeholder="Rating" type="number"
+            [(ngModel)]="book.rating"
+            (change)="rateBook(book)"
+            (keyup)="rateBook(book)"/>
+          <label>Rating</label>
+        </div>
+
+        <label>
+          <input id="indeterminate-checkbox" type="checkbox"
+          (ngModelChange)="toggleBook(book)" [checked]="book.complete"/>
+          <span>Read</span>
+        </label>
+        <a (click)="removeBook(book)" class="secondary-content btn">
+          <i class="material-icons">delete</i>
+        </a>
+        <!--button class="secondary-content" (click)="removeBook(book)">X</button-->
+
+        <!--app-book-card [book]="book"
                        (toggle)="toggleBook($event)"
                        (rate)="rateBook($event)"
-                       (remove)="removeBook($event)"></app-book-card>
+                       (remove)="removeBook($event)"></app-book-card-->
       </li>
     </ul>
   </section>

@@ -7,3 +7,7 @@ input ~ button {
   display: block;
   margin-top: 5px;
 }
+
+input[type=number] {
+  max-width: 50px !important;
+}
