@@ -37,18 +37,13 @@
 
         <label>
           <input id="indeterminate-checkbox" type="checkbox" class="primary-color"
-          (ngModelChange)="toggleBook(book)" [checked]="book.complete"/>
+                 (change)="toggleBook(book)"
+                 [checked]="book.complete"/>
           <span>Read</span>
         </label>
         <a (click)="removeBook(book)" class="secondary-content primary-color">
           <i class="material-icons">delete</i>
         </a>
-        <!--button class="secondary-content" (click)="removeBook(book)">X</button-->
-
-        <!--app-book-card [book]="book"
-                       (toggle)="toggleBook($event)"
-                       (rate)="rateBook($event)"
-                       (remove)="removeBook($event)"></app-book-card-->
       </li>
     </ul>
   </section>
