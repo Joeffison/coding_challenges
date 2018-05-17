@@ -1,0 +1,10 @@
+{
+    "Empty House": {"V": 120.0, "I": 0.0},
+    "My House": {"V": 120.0, "i": 4.5},
+    "Your House": {"v": 124.0, "I": 3.78},
+    "240 House": {"Voltage": 240.0, "Amps": 1.5},
+    "Light Commercial": {"V": 600.0, "I": 1.5},
+    "Large Commercial": {"V": 600.0, "Amperes": 15.5},
+    "Industrial #1": {"Volts": 4160, "Current": 25, "PF": 0.75},
+    "Industrial #2": {"Volts": 4160, "Current": 30, "PF": 0.95}
+}
