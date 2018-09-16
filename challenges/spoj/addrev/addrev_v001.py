@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 import fileinput
 
 if __name__ == '__main__':
