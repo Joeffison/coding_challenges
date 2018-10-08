@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AE00 - Rectangles</title>
+</head>
+
+<body>
+  <div id="problem-body">
+    <p>
+      Byteman has a collection of N squares with side 1.
+      How many different rectangles can he form using these squares?
+    </p>
+
+    <p>
+      Two rectangles are considered different if none of them can be rotated and moved to obtain the second one.
+      During rectangle construction, Byteman can neither deform the squares nor put any squares upon any other ones.
+    </p>
+
+    <h3>Input</h3>
+    <p>
+      The first and only line of the standard input contains one integer N (1 &lt;= N &lt;= 10000).
+    </p>
+
+    <h3>Output</h3>
+    <p>
+      The first and only line of the standard output should contain a single integer equal to
+      the number of different rectangles that Byteman can form using his squares.
+    </p>
+
+    <h3>Example</h3>
+    <p>For the input data:
+    </p><pre>6</pre>
+
+    <p>
+      the correct result is:
+    </p><pre>8</pre>
+
+    <p>
+      <img src="./min_25_ae00.png" width="250px">
+    </p>
+    <!-- old code: <p><img src="https://vn.spoj.com/content/ae00.jpg"/></p> edit by francky-->
+    <!-- old2 <p><img src="https://spoj.com/content/francky:AE00img"/></p> -->
+
+    <p>
+      <i>Task author: Jakub Radoszewski.</i>
+    </p>
+  </div>
+</body>
+
+<style>
+  #problem-body pre {
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+    border-left-color: #5bc0de;
+    background: 0px;
+    font-size: 11px;
+  }
+
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  code, kbd, pre, samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  }
+</style>
+</html>
